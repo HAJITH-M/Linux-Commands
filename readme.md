@@ -100,60 +100,65 @@
 * **`mv <oldfilename> <newfilename>`** – Renames or moves a file from source to destination.
   Acts as a **rename** if both files are in the same directory, or a **move** otherwise.
 
----
-
-### 📁 File Copy, Move, and Rename – With Paths
-
-* **Copy file from one directory to another:**
-
-  ```bash
-  cp /home/user/docs/file.txt /home/user/backup/
-  ```
-
-  This command copies `file.txt` **from `docs/` to `backup/`**.
-
-* **Rename a file within the same directory:**
-
-  ```bash
-  mv oldname.txt newname.txt
-  ```
-
-  This renames the file without changing its location.
-
-* **Move a file to another directory and rename it:**
-
-  ```bash
-  mv /home/user/docs/file.txt /home/user/backup/renamed_file.txt
-  ```
-
-  This moves the file and changes its name during the move.
-
-* **Copy file from current dir to a subdirectory:**
-
-  ```bash
-  cp myfile.txt subdir/
-  ```
-
-* **Copy file using relative paths:**
-
-  ```bash
-  cp ../source.txt ./destination/
-  ```
-
-* **Copy entire folder and contents:**
-
-  ```bash
-  cp -r /home/user/folder1 /home/user/folder2
-  ```
-
-  The `-r` option stands for **recursive**, needed when copying directories.
-
-* **Move all `.txt` files from one folder to another:**
-
-  ```bash
-  mv /source/*.txt /destination/
-  ```
+* **Copying using `cat` command:**
+  **`cat <oldfilename> >> <newfilename>`** – Appends the content of `oldfilename` to `newfilename`.
+  Can also be used for **manual file merging**.
 
 ---
 
+### 📁 File Copy, Move, and Rename – With Paths (Including `~` Home Shortcut)
+
+* **Using `~` to represent the user's home directory:**
+
+  ```bash
+  cp ~/Downloads/file.txt ~/Documents/
+  ```
+
+  This copies `file.txt` from the `Downloads` folder to the `Documents` folder inside your home directory.
+
+* **Rename a file inside the home directory:**
+
+  ```bash
+  mv ~/notes/todo.txt ~/notes/done.txt
+  ```
+
+  This renames `todo.txt` to `done.txt` in the `notes` directory under home.
+
+* **Move a file to another directory using `~`:**
+
+  ```bash
+  mv ~/Pictures/image.png ~/Desktop/
+  ```
+
+* **Copy a file from another directory into your home folder:**
+
+  ```bash
+  cp /var/log/syslog ~/log_backup.txt
+  ```
+
+* **Copy file from current dir to a subdirectory in home:**
+
+  ```bash
+  cp myfile.txt ~/Documents/
+  ```
+
+* **Copy using relative path with tilde:**
+
+  ```bash
+  cp ../report.txt ~/Reports/
+  ```
+
+* **Copy a full folder into home:**
+
+  ```bash
+  cp -r /opt/project ~/project_backup
+  ```
+
+* **Move multiple files (e.g., `.txt`) to a folder in home:**
+
+  ```bash
+  mv *.txt ~/TextFiles/
+  ```
+
+---
 
