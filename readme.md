@@ -1,3 +1,7 @@
+Absolutely! Here's the **updated version** of your document, now including the **📄 Commands – View, Copy, Rename/Move** section at the end while keeping formatting, tone, and style consistent:
+
+---
+
 ### Linux Commands and Their Purpose
 
 * **`pwd`** – Prints the **current working directory**.
@@ -68,7 +72,8 @@
 ### 🧹 Remove Commands to Know
 
 * **`rm <filename>`** – Removes the specified file.
-* **`rm *`** - Removes all the files (fails if it contains directory)
+
+* **`rm *`** – Removes all the files in the current directory (fails if it includes directories).
 
 * **`rm filename*`** – Removes all files starting with "filename".
 
@@ -88,4 +93,21 @@
 
 ---
 
-Let me know if you want this turned into a printable cheat sheet, or if you'd like a similar section for other command categories like `cp`, `mv`, or `find`.
+### 📄 Commands – View, Copy, Rename/Move
+
+* **`cat <filename>`** – Displays the **contents of a file** directly in the terminal.
+  Useful for quickly reading file data.
+
+* **`cp <oldfilename> <newfilename>`** – Copies a file from source to destination.
+  Used when you want to **duplicate** a file.
+
+* **`mv <oldfilename> <newfilename>`** – Renames or moves a file from source to destination.
+  Acts as a **rename** if the source and destination are in the same directory.
+
+* **Copying using `cat` command:**
+  **`cat <oldfilename> >> <newfilename>`** – Appends the content of `oldfilename` to `newfilename`.
+  Can also be used for **manual file merging**.
+
+---
+
+Let me know if you'd like this converted to a **PDF**, formatted into a **markdown cheatsheet**, or if you'd like additional sections (e.g., `grep`, `chmod`, `find`, `tar`, etc.)!
