@@ -45,6 +45,10 @@
 
 ---
 
+Certainly! Here's your updated **📂 LS Commands to Know** section with the **`ls -lstr`** command added at the end, along with its breakdown—formatted just like the rest of your document:
+
+---
+
 ### 📂 LS Commands to Know
 
 * **`ls`** – Lists **all files and directories** in the current directory.
@@ -61,9 +65,20 @@
 
 * **`ls -ld <dirname*>`** – Detailed listing for all directories that **start with "dirname"**.
 
+* **`ls -ld *`** – Detailed listing for all directories that **start with "dirname"**.
+
 * **`ls -d <dirname*>`** – Lists only the **names** of directories that **start with "dirname"**.
 
+* **`ls -lstr`** – Lists files in **long format**, showing **block size**, sorted by **modification time**, in **reverse order** (oldest first).
+  A powerful combination to see file details and sort by time.
+
+  * `-l` → Long listing format
+  * `-s` → Show file size in blocks
+  * `-t` → Sort by last modified time
+  * `-r` → Reverse the sort order
+
 ---
+
 
 ### 🧹 Remove Commands to Know
 
