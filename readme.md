@@ -45,10 +45,6 @@
 
 ---
 
-Certainly! Here's your updated **📂 LS Commands to Know** section with the **`ls -lstr`** command added at the end, along with its breakdown—formatted just like the rest of your document:
-
----
-
 ### 📂 LS Commands to Know
 
 * **`ls`** – Lists **all files and directories** in the current directory.
@@ -58,6 +54,9 @@ Certainly! Here's your updated **📂 LS Commands to Know** section with the **`
 * **`ls filename*`** – Lists all files that **start with "filename"**.
 
 * **`ls *filename`** – Lists all files that **end with "filename"**.
+
+* **`ls -a`** – Lists all files, including hidden files (those starting with a dot .).
+              - Useful for revealing files like .bashrc, .gitignore, or .env.
 
 * **`ls -ld <dirname>`** – Shows **detailed info** about a directory without listing its contents.
 
@@ -70,7 +69,7 @@ Certainly! Here's your updated **📂 LS Commands to Know** section with the **`
 * **`ls -d <dirname*>`** – Lists only the **names** of directories that **start with "dirname"**.
 
 * **`ls -lstr`** – Lists files in **long format**, showing **block size**, sorted by **modification time**, in **reverse order** (oldest first).
-  A powerful combination to see file details and sort by time.
+                 - A powerful combination to see file details and sort by time.
 
   * `-l` → Long listing format
   * `-s` → Show file size in blocks
