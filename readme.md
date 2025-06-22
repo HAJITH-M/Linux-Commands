@@ -68,6 +68,7 @@
 ### 🧹 Remove Commands to Know
 
 * **`rm <filename>`** – Removes the specified file.
+* **`rm *`** - Removes all the files (fails it contains directory)
 
 * **`rm filename*`** – Removes all files starting with "filename".
 
