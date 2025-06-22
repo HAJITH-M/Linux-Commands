@@ -94,6 +94,26 @@
 * **`cat <filename>`** – Displays the **contents of a file** directly in the terminal.
   Useful for quickly reading file data.
 
+  **Examples using paths:**
+
+  ```bash
+  cat ~/Documents/notes.txt
+  ```
+
+  – Displays content from a file in the user's `Documents` folder.
+
+  ```bash
+  cat /var/log/syslog
+  ```
+
+  – Reads a system log file using an **absolute path**.
+
+  ```bash
+  cat ../report.txt
+  ```
+
+  – Displays a file from the **parent directory**.
+
 * **`cp <oldfilename> <newfilename>`** – Copies a file from source to destination.
   Used when you want to **duplicate** a file in the same or different directory.
 
@@ -103,6 +123,14 @@
 * **Copying using `cat` command:**
   **`cat <oldfilename> >> <newfilename>`** – Appends the content of `oldfilename` to `newfilename`.
   Can also be used for **manual file merging**.
+
+  **Example with paths:**
+
+  ```bash
+  cat ~/notes/part1.txt >> ~/notes/complete.txt
+  ```
+
+  – Appends the contents of `part1.txt` into `complete.txt` in the `~/notes/` directory.
 
 ---
 
