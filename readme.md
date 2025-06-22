@@ -1,7 +1,3 @@
-Absolutely! Here's the **updated version** of your document, now including the **📄 Commands – View, Copy, Rename/Move** section at the end while keeping formatting, tone, and style consistent:
-
----
-
 ### Linux Commands and Their Purpose
 
 * **`pwd`** – Prints the **current working directory**.
@@ -99,15 +95,65 @@ Absolutely! Here's the **updated version** of your document, now including the *
   Useful for quickly reading file data.
 
 * **`cp <oldfilename> <newfilename>`** – Copies a file from source to destination.
-  Used when you want to **duplicate** a file.
+  Used when you want to **duplicate** a file in the same or different directory.
 
 * **`mv <oldfilename> <newfilename>`** – Renames or moves a file from source to destination.
-  Acts as a **rename** if the source and destination are in the same directory.
-
-* **Copying using `cat` command:**
-  **`cat <oldfilename> >> <newfilename>`** – Appends the content of `oldfilename` to `newfilename`.
-  Can also be used for **manual file merging**.
+  Acts as a **rename** if both files are in the same directory, or a **move** otherwise.
 
 ---
 
-Let me know if you'd like this converted to a **PDF**, formatted into a **markdown cheatsheet**, or if you'd like additional sections (e.g., `grep`, `chmod`, `find`, `tar`, etc.)!
+### 📁 File Copy, Move, and Rename – With Paths
+
+* **Copy file from one directory to another:**
+
+  ```bash
+  cp /home/user/docs/file.txt /home/user/backup/
+  ```
+
+  This command copies `file.txt` **from `docs/` to `backup/`**.
+
+* **Rename a file within the same directory:**
+
+  ```bash
+  mv oldname.txt newname.txt
+  ```
+
+  This renames the file without changing its location.
+
+* **Move a file to another directory and rename it:**
+
+  ```bash
+  mv /home/user/docs/file.txt /home/user/backup/renamed_file.txt
+  ```
+
+  This moves the file and changes its name during the move.
+
+* **Copy file from current dir to a subdirectory:**
+
+  ```bash
+  cp myfile.txt subdir/
+  ```
+
+* **Copy file using relative paths:**
+
+  ```bash
+  cp ../source.txt ./destination/
+  ```
+
+* **Copy entire folder and contents:**
+
+  ```bash
+  cp -r /home/user/folder1 /home/user/folder2
+  ```
+
+  The `-r` option stands for **recursive**, needed when copying directories.
+
+* **Move all `.txt` files from one folder to another:**
+
+  ```bash
+  mv /source/*.txt /destination/
+  ```
+
+---
+
+
