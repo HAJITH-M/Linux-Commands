@@ -1,4 +1,4 @@
-### Linux Commands and Their Purpose
+### 1. Linux Commands and Their Purpose
 
 * **`pwd`** – Prints the **current working directory**.
   Used to display the absolute path of the directory you're currently working in.
@@ -45,7 +45,7 @@
 
 ---
 
-### 📂 LS Commands to Know
+### 2. 📂 LS Commands to Know
 
 * **`ls`** – Lists **all files and directories** in the current directory.
 
@@ -79,7 +79,7 @@
 ---
 
 
-### 🧹 Remove Commands to Know
+### 3. 🧹 Remove Commands to Know
 
 * **`rm <filename>`** – Removes the specified file.
 
@@ -103,7 +103,7 @@
 
 ---
 
-### 📄 Commands – View, Copy, Rename/Move
+### 4. 📄 Commands – View, Copy, Rename/Move
 
 * **`cat <filename>`** – Displays the **contents of a file** directly in the terminal.
   Useful for quickly reading file data.
@@ -208,7 +208,7 @@
   ```
 ---
 
-### 📁 Directory Creation with `mkdir`
+### 5. 📁 Directory Creation with `mkdir`
 
 * Basic usage
 * Creating **parent directories** with `-p`
@@ -281,7 +281,7 @@
   ---
 
 
-### 📂 Directory Navigation with `cd`
+### 6. 📂 Directory Navigation with `cd`
 
 * **`cd <dirname>`** – Changes into the specified subdirectory.
   Example:
@@ -315,7 +315,7 @@
 
 ---
 
-## 🔗 Hard Links & Soft Links in Linux
+##  7. 🔗 Hard Links & Soft Links in Linux
 
 ---
 
@@ -463,7 +463,7 @@ ln -s /mnt/drive1/file.txt /mnt/drive2/symlink.txt
 
 ---
 
-## 📁 Directory Aliases in Linux
+## 8. 📁 Directory Aliases in Linux
 
 ---
 
@@ -561,7 +561,7 @@ alias ...='cd ../..'
 
 ---
 
-## 📈 Running Scripts in Background and Monitoring with `nohup`
+## 9. 📈 Running Scripts in Background and Monitoring with `nohup`
 
 ---
 
@@ -672,7 +672,7 @@ kill -9 12345
 
 ---
 
-## 🌐 Download & Disk Usage Commands
+## 10. 🌐 Download & Disk Usage Commands
 
 ---
 
@@ -765,7 +765,7 @@ sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
 ---
 
 
-## 🗜️ Compression – Using `zip` Format
+## 11. 🗜️ Compression – Using `zip` Format
 
 ---
 
@@ -839,7 +839,7 @@ tar -xvf sample.tar
 ---
 
 
-## 🔢 Count & Sort – Using `wc` and `sort`
+## 12. 🔢 Count & Sort – Using `wc` and `sort`
 
 ---
 
@@ -967,7 +967,7 @@ sort -n -r sortfile2.txt
 
 ---
 
-# 🧾 Grep – Pattern Matching and Related Tools
+# 13. 🧾 Grep – Pattern Matching and Related Tools
 
   ## 📂 Example Log File Content
 
@@ -1126,6 +1126,7 @@ sort -n -r sortfile2.txt
   | `^pattern` | Match lines beginning with a pattern            |
 
   ---
+
 
 
 # 🔗SSH and SCP Connectivity and Usage
