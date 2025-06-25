@@ -201,7 +201,11 @@
   ```bash
   mv *.txt ~/TextFiles/
   ```
+* **move a full folder into home:**
 
+  ```bash
+  mv Day-2 ~/
+  ```
 ---
 
 ### 📁 Directory Creation with `mkdir`
@@ -533,7 +537,7 @@ alias ...='cd ../..'
 
 ---
 
-## 📈 Running Python Scripts in Background and Monitoring with `nohup`
+## 📈 Running Scripts in Background and Monitoring with `nohup`
 
 ---
 
@@ -936,11 +940,6 @@ sort -n -r sortfile2.txt
 
 * `-n` → Sort by numeric value
 * `-r` → Reverse the sorting order (descending)
-
----
-
-
-Here is your updated **Markdown document** with the revised heading style as requested—grouped under the main heading **"Grep – Pattern Matching and Related Tools"** and reorganized accordingly:
 
 ---
 
