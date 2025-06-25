@@ -666,10 +666,13 @@ wget https://example.com/sample.txt
 
 ### 💽 `du` – Disk Usage
 
-* **`du -h`** – Displays **disk usage in human-readable format** (KB, MB, GB).
+* **`du -h` , `df -h`** – Displays **disk usage in human-readable format** (KB, MB, GB).
 
 ```bash
-du -h
+du -h 
+```
+```bash
+df -h
 ```
 
 * **`du -sh`** – Displays the **total size** of the current directory or specified folder, **summarized and human-readable**.
@@ -680,6 +683,59 @@ du -sh myfolder/
 ```
 
 ---
+
+## 🧠 RAM Usage & Cache Management
+
+---
+
+### 📊 View RAM Usage
+
+#### 🔹 `free -m` – Show memory usage in **megabytes**
+
+```bash
+free -m
+```
+
+Displays the amount of used, free, and available memory in MB.
+
+#### 🔹 `free -g` – Show memory usage in **gigabytes**
+
+```bash
+free -g
+```
+
+Displays the same info as above, but in GB for easier reading on systems with more RAM.
+
+📌 Output includes:
+
+* **total** – Total installed memory
+* **used** – Memory in use
+* **free** – Completely unused memory
+* **available** – Estimated available memory (including buffers/cache)
+
+---
+
+### 🧹 Clear Cached Memory (Drop Cache)
+
+#### 🔹 Free up page cache, dentries, and inodes (⚠️ Use with caution)
+
+```bash
+sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
+```
+
+✅ What it does:
+
+* `sync` writes all pending disk writes to storage (flushes disk buffers)
+* `echo 3 > ...drop_caches` clears:
+
+  * PageCache (`1`)
+  * Dentries and inodes (`2`)
+  * Setting `3` clears **all three types**
+
+⚠️ **Warning**: This doesn't affect running programs but may temporarily slow performance as caches are rebuilt.
+
+---
+
 
 ## 🗜️ Compression – Using `zip` Format
 
@@ -754,57 +810,6 @@ tar -xvf sample.tar
 
 ---
 
-## 🧠 RAM Usage & Cache Management
-
----
-
-### 📊 View RAM Usage
-
-#### 🔹 `free -m` – Show memory usage in **megabytes**
-
-```bash
-free -m
-```
-
-Displays the amount of used, free, and available memory in MB.
-
-#### 🔹 `free -g` – Show memory usage in **gigabytes**
-
-```bash
-free -g
-```
-
-Displays the same info as above, but in GB for easier reading on systems with more RAM.
-
-📌 Output includes:
-
-* **total** – Total installed memory
-* **used** – Memory in use
-* **free** – Completely unused memory
-* **available** – Estimated available memory (including buffers/cache)
-
----
-
-### 🧹 Clear Cached Memory (Drop Cache)
-
-#### 🔹 Free up page cache, dentries, and inodes (⚠️ Use with caution)
-
-```bash
-sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
-```
-
-✅ What it does:
-
-* `sync` writes all pending disk writes to storage (flushes disk buffers)
-* `echo 3 > ...drop_caches` clears:
-
-  * PageCache (`1`)
-  * Dentries and inodes (`2`)
-  * Setting `3` clears **all three types**
-
-⚠️ **Warning**: This doesn't affect running programs but may temporarily slow performance as caches are rebuilt.
-
----
 
 ## 🔢 Count & Sort – Using `wc` and `sort`
 
@@ -934,4 +939,168 @@ sort -n -r sortfile2.txt
 
 ---
 
+
+Here is your updated **Markdown document** with the revised heading style as requested—grouped under the main heading **"Grep – Pattern Matching and Related Tools"** and reorganized accordingly:
+
+---
+
+# 🧾 Grep – Pattern Matching and Related Tools
+
+## 📂 Example Log File Content
+
+`log1.txt`:
+
+```
+[INFO] Server started  
+[DEBUG] Connection successful  
+[ERROR] File not found  
+[INFO] Job completed  
+[WARNING] Low memory  
+[ERROR] Timeout reached  
+```
+
+---
+
+## 🔍 Grep – Basic Pattern Matching
+
+### Case-Sensitive Match
+
+```bash
+grep ERROR log1.txt
+```
+
+Finds lines containing `ERROR`.
+
+### Case-Insensitive Match
+
+```bash
+grep -i error log1.txt
+```
+
+Matches `error`, `Error`, `ERROR`, etc.
+
+### Invert Match (Exclude Pattern)
+
+```bash
+grep -v ERROR log1.txt
+```
+
+Excludes lines with `ERROR`.
+
+---
+
+## 📁 Grep – Pattern Matching Across Files
+
+### Search in Multiple Files
+
+```bash
+grep WARNING *.txt
+```
+
+Searches for `WARNING` in all `.txt` files.
+
+### Recursive Directory Search
+
+```bash
+grep -r "Timeout" ~/logs
+```
+
+Searches all subdirectories under `~/logs`.
+
+---
+
+## 📡 Grep – Real-Time Log Monitoring
+
+### Live Stream Matching Lines
+
+```bash
+grep WARNING *.txt | tail -f
+```
+
+Follows matching lines as files grow.
+
+### View Last N Matched Lines
+
+```bash
+grep WARNING *.txt | tail -20
+```
+
+Displays the last 20 lines of grep output.
+
+---
+
+## 🔠 Grep – Regular Expression Anchors
+
+### Match Lines Starting with a Specific Tag
+
+```bash
+grep "^\[ERROR\]" log1.txt
+```
+
+Matches lines beginning with `[ERROR]`.
+
+---
+
+## 🧠 Related – Process Monitoring with `ps` and `grep`
+
+### Find a Running Python Script
+
+```bash
+ps -aux | grep data_processing.py
+```
+
+**Example Output:**
+
+```
+python3 data_processing.py
+grep --color=auto data_processing.py
+```
+
+> Note: `grep` itself appears in results; this is normal.
+
+### `ps` Flag Meanings
+
+| Flag | Description                                  |
+| ---- | -------------------------------------------- |
+| `a`  | Show processes for all users                 |
+| `u`  | Display process owners                       |
+| `x`  | Include processes without a terminal session |
+
+---
+
+## 📁 Related – File and Directory Navigation
+
+### Example File Tree
+
+```bash
+/home/ubuntu/logs
+├── data.txt
+├── job_20231201.log
+├── job_20241201.log
+└── test/
+    └── list
+```
+
+### Useful Commands
+
+```bash
+cd logs         # Navigate to logs directory
+pwd             # Print working directory
+cd test         # Go into 'test' subdirectory
+cat data.txt    # Display contents of data.txt
+```
+
+---
+
+## ✅ Grep – Quick Option Reference
+
+| Option     | Description                                     |
+| ---------- | ----------------------------------------------- |
+| `-i`       | Ignore case when matching                       |
+| `-v`       | Invert match; exclude matching lines            |
+| `-r`       | Recursively search in directories               |
+| `-f`       | Follow new lines as they are added (via `tail`) |
+| `^pattern` | Match lines beginning with a pattern            |
+
+---
 
