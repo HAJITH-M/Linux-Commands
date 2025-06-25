@@ -44,5 +44,30 @@
 
   This creates three directories: `client_X/docs`, `client_Y/docs`, and `client_Z/docs` with nested `docs` folders.
 
----
+
+  * **Create Directories `project_1` to `project_100` with a `docs` Subdirectory:**
+
+  ```bash
+  mkdir -p project_{1..100}/docs
+  ```
+
+  **Explanation:**
+
+  * `project_{1..100}` creates `project_1`, `project_2`, ..., `project_100`.
+  * The `/docs` adds a `docs` folder inside each.
+
+  ---
+
+  * **Create Directories `project_a` to `project_z` with a `docs` Subdirectory**
+
+  ```bash
+  mkdir -p project_{a..z}/docs
+  ```
+
+  **Explanation:**
+
+  * `project_{a..z}` expands from `project_a` to `project_z`.
+  * Each will contain its own `docs` folder.
+
+  ---
 
