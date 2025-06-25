@@ -1249,4 +1249,3 @@ sort -n -r sortfile2.txt
 
   ---
 
-  Let me know if you want this saved to a file or if you need a `.pdf` or `.md` export!

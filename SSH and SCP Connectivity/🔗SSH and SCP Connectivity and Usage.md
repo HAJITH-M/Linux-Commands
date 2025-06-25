@@ -118,4 +118,3 @@ scp <file> ubuntu@user1:/home/ubuntu/destination_path
 
 ---
 
-Let me know if you want this saved to a file or if you need a `.pdf` or `.md` export!
