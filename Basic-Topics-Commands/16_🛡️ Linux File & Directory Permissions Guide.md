@@ -1,6 +1,6 @@
 # 🛡️ Linux File & Directory Permissions Guide
 
-This guide walks you through how Linux file and directory permissions work, how to set them, and how to troubleshoot common permission issues using `chmod`, `ls`, and file access control.
+This guide walks you through how Linux file and directory permissions work, how to set them, and how to troubleshoot common permission issues using `chmod`, `chown`, `ls`, and file access control.
 
 ---
 
@@ -65,16 +65,50 @@ chmod a+x file     # Give execute permission to all
 
 ---
 
+## 👤 Changing File Ownership with `chown`
+
+The `chown` command is used to change the **owner** and/or **group** of a file or directory.
+
+### 📌 Syntax
+
+```bash
+chown [new-owner] file
+chown [new-owner]:[new-group] file
+```
+
+### 🔧 Examples
+
+```bash
+chown user2 file.txt             # Change owner to user2
+chown user2:group2 file.txt      # Change owner and group
+chown :group2 file.txt           # Change only group
+chown -R user1 folder/           # Recursively change folder ownership
+```
+
+### 🛠️ Real Use Cases
+
+| Purpose                                 | Command                        |
+| --------------------------------------- | ------------------------------ |
+| Transfer file ownership to another user | `chown user2 file.txt`         |
+| Assign file to a specific group         | `chown :devs file.txt`         |
+| Fix ownership on all project files      | `chown -R user1:devs /project` |
+
+🔒 Only the **root user** or the current **file owner** can change ownership.
+
+---
+
 ## 👥 Example: File Not Visible to Another User
 
 ### Scenario:
 
 * You (as `user1`) created a file `data.txt`
+
 * You ran:
 
   ```bash
   chmod 777 data.txt
   ```
+
 * But the user `sha` **can’t see** the file from their account.
 
 ### ✅ Cause:
