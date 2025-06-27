@@ -1,7 +1,6 @@
 # 🐧 The Complete Linux Commands Guide Every Beginner Needs (2025 Edition)
 
-![Linux]([https://dev-to-uploads.s3.amazonaws.com/uploads/articles/linux-terminal-header.png](https://ik.imagekit.io/k5gvskw6y/portfolio/Projects/dz5igkmp.png))
-
+![Linux](https://ik.imagekit.io/k5gvskw6y/portfolio/Projects/dz5igkmp.png)
 Welcome to the world of Linux! Whether you're a developer starting your journey or someone curious about the command line, this comprehensive guide will take you from zero to hero with essential Linux commands.
 
 ## 🎯 What You'll Learn
